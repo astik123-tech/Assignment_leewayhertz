@@ -1,0 +1,5 @@
+export const environment = {
+  production: true,
+  url: '//' + window.location.hostname +":" + window.location.port,
+  rooturl : '//' + window.location.hostname +":" + window.location.port,
+};

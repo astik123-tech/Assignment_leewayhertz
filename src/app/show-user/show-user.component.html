@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 d-md-flex flex-row justify-content-center offset-md-4 ">
+      <div *ngFor="let user of userData">
+        <div class="card ml-md-4 border border-primary border-top-0 border-bottom-0 mt-5 rounded-0 shadow"
+          style="width: 18rem;border-width: 5px;">
+          <img class="card-img-top" src="{{url}}/{{user.Image1}}" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">First Name: {{user.firstName  | titlecase}}</h6>
+            <h6 class="card-title">Last Name: {{user.lastName  | titlecase}}</h6>
+            <h6 class="card-title">Email: {{user.email}}</h6>
+            <h6 class="card-title">Phone Number: {{user.phoneNumber}}</h6>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- shazaibrehman127@gmail.com
+  mau@6360 -->

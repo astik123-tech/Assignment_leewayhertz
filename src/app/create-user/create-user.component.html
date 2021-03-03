@@ -1,0 +1,42 @@
+
+
+<div class="container" >
+  
+<div class="row " style="margin-top: 50px;">
+  <div class="col-md-6 m-auto  p-5 border  border-top-0 border-bottom-0 border-primary" style="border-width:5px;">
+    <form class="RegisterForm" [formGroup]="registerForm">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control border border-dark border-top-0 border-left-0 border-right-0 rounded-0" style="outline: 0;" formControlName="firstName">
+        <small *ngIf="h.firstName.touched && h.firstName.errors && h.firstName.errors.required">First name value is required</small>
+      
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control border border-dark border-top-0 border-left-0 border-right-0 rounded-0" style="outline: 0;" formControlName="lastName">
+        <small *ngIf="h.lastName.touched && h.lastName.errors && h.lastName.errors.required">Last name value is required</small>  </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" class="form-control border border-dark border-top-0 border-left-0 border-right-0 rounded-0" style="outline: 0;" formControlName="email">
+        <div *ngIf="h.email.touched && h.email.errors">
+          <small *ngIf="h.email.errors.required">Email value is required.</small>
+          <small *ngIf="h.email.errors.email">Must be a valid email.</small>
+       </div>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="number" class="form-control border border-dark border-top-0 border-left-0 border-right-0 rounded-0" style="outline: 0;" formControlName="phoneNumber">
+        <div *ngIf="h.phoneNumber.touched && h.phoneNumber.errors">
+           <small *ngIf="h.phoneNumber.errors.required">Phone number value is required.</small>
+           <small *ngIf="h.phoneNumber.errors.phonenumber">Must be a valid phone number.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Image</label>
+        <input type="file" class="form-control border border-dark border-top-0 border-left-0 border-right-0 rounded-0" style="outline: 0;" (change)="ImageUpload($event)">
+      </div>
+      <button type="submit" class="btn btn-outline-primary btn-block rounded-0 " (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
